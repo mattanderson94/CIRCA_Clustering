@@ -1,4 +1,4 @@
-function [R, ngcount, counter, gs, converged] = CoordinateAscent_RI2(hedges,ng,maxits) %#codegen
+function [R, ngcount, counter, gs, converged] = CoordinateAscent_RI2(hedges,ng,maxits)
 
 % Coordinate Ascent clustering method:
 
@@ -100,5 +100,3 @@ while searching
     end
     
 end
-
-% codegen CoordinateAscent_RI2 -args {coder.typeof(double(1), [1000 1000]), double(1), double(1)}
