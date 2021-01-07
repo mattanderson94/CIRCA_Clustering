@@ -9,6 +9,13 @@ CIRCA_Clustering.m is a MATLAB function that accepts three arguments:
 2. ng - number of groups/clusters/categories
 3. maxits - number of coordinate ascent iterations. To ensure convergence, set this to inf. 
 
+And there are 5 outputs:
+gs - An nx1 vector of integers from 1-ng, which gives the cluster assignments for every row/column (i.e., image/item) in hedges.
+ngcount - number of moves made via coordinate ascent.
+counter - number of proposals made. 
+R - Rand Index between similarity matrix and optimized clustering.
+converged - true if the algorithm reaches a stationary point (and no moves that improve the rand index are possible)
+
 Example.m is a MATLAB script that shows how CIRCA_Clustering.m works on a simulated dataset, with a small amount of response noise. 
 
 See our paper (Category Systems for Real World Scenes, Anderson et al. (2021)) for further details. 
