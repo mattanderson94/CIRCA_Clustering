@@ -1,4 +1,4 @@
-# CIRCA_Clustering
+# CIRCA Clustering
 Here we present a clustering function that finds the optimal clustering of an input similarity matrix by maximizing the Rand index (RI) via coordinate ascent.
 In short, a proposal is made to move a random stimulus (i.e., row/column) to a random, different cluster.
 If this proposal generates an increase in the RI, the proposal is accepted.
