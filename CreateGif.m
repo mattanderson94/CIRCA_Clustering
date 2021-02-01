@@ -1,7 +1,7 @@
 clear; clc; close all;
 
 % simulate some random clustering data
-ng = 10; % number of clusters/groups
+ng = 5; % number of clusters/groups
 nim = 96; % number of images
 
 % ensure each group has at least one image in it
@@ -42,12 +42,12 @@ gs = unidrnd(ng,1,nim-ng);
 gs = [x,gs];
 gs = gs(randperm(nim));
 
-h = figure('Position', [0 0 nim-20 nim-20]);
+h = figure;
 axis tight manual;
+axis square;
 filename = 'CIRCAInAction.gif';
 
 for i = 1:10
-    
     [gs, ngcount, counter, R, converged] = CIRCA_Clustering_gif(hedges,ng,gs,1); 
 
     [~,sidx] = sort(gs);
@@ -55,9 +55,7 @@ for i = 1:10
     % colorbar;
     axis off
     colormap copper
-    % set(gca,'LooseInset',get(gca,'TightInset'));
-    axis square;
-    
+    set(gca,'LooseInset',get(gca,'TightInset'));
     
     drawnow
     frame = getframe(h); 
